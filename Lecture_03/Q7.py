@@ -1,0 +1,5 @@
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+print("Nice to meet you", name)
+print("I can't believe that you are", end=' ')
+print(age, "years old already")
