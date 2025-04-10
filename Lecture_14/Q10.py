@@ -1,8 +1,12 @@
 temp_highs = { "Sep" : 78, "Oct" : 65,
-               "Nov" : 49, "Dec" : 36, }
+               "Nov" : 49, "Dec" : 36,
+               "Jan" : 20, "Feb" : 12,
+               "mar" : 70, }
 
-for h in temp_highs:
-    print(h, end=' ')
+for m in temp_highs:
+    if temp_highs[m] == 36:
+    #print(h, end=' ')
+        print(f'{m} has a high temp of {temp_highs[m]}')
     
 
 # for h in temp_highs:
