@@ -6,7 +6,7 @@ Today, we discussed that `split()` on a string breaks strings apart based on whi
 
 When provided with an argument, such as `split('?')` in [Q2.py](Q2.py), Python will return results for something on both sides of the delimiter, since a delimiter separates tokens.  So if the delimeter is at the beginning or end of a string, there will be an empty string that is generated in the list at the front or the back of the list.
 
-We worked through a couple of questions from [Lecture 21](../Lecture_21) and then worked through the first seven questions of this lecture. These quesions covered topics from the correct use of `split()` and `join()` to working through some basic list-related questions.
+We worked through the first seven questions of this lecture. These quesions covered topics from the correct use of `split()` and `join()` to working through some basic list-related questions. We then continued our discussion about different ways you can use AI for class.
 
 ## The topics for this lecture were:
 
