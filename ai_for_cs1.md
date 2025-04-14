@@ -88,7 +88,7 @@ There's zero learning in that situation, and the student isn't properly prepared
 
 *A different way to approach this situation is to use the AI as a suggestion engine and competent CS tutor.*
 
-Here is a sample prompt that you could use to set up a useful and interacative session. You would replace the actual assignment specification at the end of this example with a relevant assignment or problem to work through.
+Here is a sample prompt with a well-defined [system message](https://promptmetheus.com/resources/llm-knowledge-base/system-message) and [user section](https://www.nebuly.com/blog/llm-system-prompt-vs-user-prompt) that you could use to set up a useful and interacative session. You would replace the actual assignment specification at the end of this example with a relevant assignment or problem to work through.
 
 >You are a friendly CS1‑level Python tutor. Your job is to guide me through the problem‑solving process *without providing any code, pseudocode, or step‑by‑step algorithmic solution*.
 >
@@ -110,57 +110,55 @@ Here is a sample prompt that you could use to set up a useful and interacative s
 >
 > Assignment Description:
 > 
-> An acronym is a word formed from the initial letters of words in a set phrase. Write a program whose input is a phrase and whose output is an acronym of the input. Append a period (.) after each letter in the acronym. If a word begins with a lower case letter, don't include that letter in the acronym. Assume the input has at least one upper case letter.
+> An acronym is a word formed from the initial letters of words in a given phrase. Write a program whose input is a phrase and whose output is an appropriate acronym of the input. Append a period (`.`) after each letter in the acronym. Acronyms should only be built from words that start with capital letters. You can assume the input has at least one word that starts with upper case letter.
 > 
 > Ex: If the input is:
 >
-> `Institute of Electrical and Electronics Engineers`
+> `As Soon As Possible`
 >
 > the output is:
 >
-> `I.E.E.E.`
+> `A.S.A.P.`
 >
 > Ex: If the input is:
 >
-> `Association for computing MACHINERY`
+> `Completely Automated Public Turing tEST to tell COMPUTERS and Humans Apart`
 >
 > the output is:
 > 
-> `A.M.`
+> `C.A.P.T.C.H.A.`
 >
-> Although the letters ACHINERY in MACHINERY are upper case, those letters are omitted for being a part of the word MACHINERY.
-> 
-> Hint: Use `isupper()` to check if a letter is upper case.
+> Although the letters `OMPUTERS` in `COMPUTERS` are upper case, those letters are not processed for the acronym for being a part of the word `COMPUTERS`. Similarly, even though `EST` in the word `tEST` are capitalized, they are not processed because the program should only pay attention to the first letter of the word.
 
-Here's why a prompt like ths works so well:
+Here's are some reasons that a prompt like ths works so well:
 
-Section | Purpose
+Item/Directive | Purpose
 :-- | :--
-System message |Gives the model a hard boundary: "No code."
+Initial system message |Gives the model a hard boundary: "No code."
+"CS1-level Python tutor" | Signals the target audience and expected depth.
 Plain-English summary | Lets you verify that you and the AI interpret the prompt the same way.
 Key elements | Helps you isolate inputs/outputs before thinking about design.
-Conceptual roadmap | Encourages thinking in [abstractions](https://www.learning.com/blog/abstraction-in-computational-thinking/) (loops, lists, dictionaries) without being given answers.
+Conceptual roadmap | Encourages AI to generate content prompting you to think in [abstractions](https://www.learning.com/blog/abstraction-in-computational-thinking/) (loops, lists, dictionaries) without being given answers.
 Guiding questions | Promotes [metacognition](https://tll.mit.edu/teaching-resources/how-people-learn/metacognition/#:~:text=Metacognition%20is%20the%20process%20by%20which%20learners%20use%20knowledge%20of%20the%20task%20at%20hand%2C%20knowledge%20of%20learning%20strategies%2C%20and%20knowledge%20of%20themselves%20to%20plan%20their%20learning%2C%20monitor%20their%20progress%20towards%20a%20learning%20goal%2C%20and%20then%20evaluate%20the%20outcome.%C2%A0) and a checklist mindset.
 Forbidden content | Reinforces the no-code rule and reduces policy slip-ups.
-"CS1-level Python tutor" | Signals the target audience and expected depth.
 Jargon limiter + parenthetical defs | Prevents overwhelm and builds vocabulary gradually.
-Scope boundaries (avoid classes/recursion) | Keeps the discussion aligned with the course.
+Scope boundaries (avoid classes/recursion/exceptions) | Keeps the discussion aligned with the course.
 Check-your-understanding question | Promotes active learning and gives you a natural pause to reflect.
 Beginner-level reminder in User section | Redundancy that further reduces drift into advanced territory.
 
 Here are some tips you can keep in mind while working with this type of prompt:
 
+1.	**Iterate safely** – If the model starts drifting into code, you should be able to stop it with: 
+"Please remove any code from your response and stick to conceptual guidance."
 1. **Be explicit** – If you later paste partial code for debugging, prepend it with:
 "Please only identify logical errors or misconceptions; do not rewrite the code for me."
-2.	**Iterate safely** – If the model starts drifting into code, you should be able to stop it with: 
-"Please remove any code from your response and stick to conceptual guidance."
-3.	**Cross‑verify** – You should compare the AI’s summary with the original specification. Any mismatch is a red flag that something is off and needs clarification—whether that’s the AI’s reading, your own understanding, or the spec itself.
-4.	**Focus on learning, not copying** – AI output should be considered as notes or tutor dialogue that must be internalized, not turned in as your own work.
+3.	**Cross‑verify** – You should critically compare the AI’s initial summary with the original specification. Any mismatch is a red flag that something is off and needs clarification—whether that’s the AI’s reading, your own understanding, or the specification itself.
+4.	**Focus on learning, not copying** – Intractions with the AI should be considered as class notes or tutor dialogue that you should internalize in formulating your own solution, not turned in as your own work.
 
 Here are some extras you can add in to modify the AI's behavior even further (add these to the "What I need from you" section):
 
 1.	**Word‑count ceiling**: "Keep each answer under 250 words so that I’m not flooded with information."
-2.	**Bloom’s Taxonomy scaffolding**: "Frame your guiding questions to progress from recall → apply → analyze."
+2.	**[Bloom’s Taxonomy](https://www.youtube.com/watch?v=ve-Evb5bGoc) scaffolding**: "Frame your guiding questions to progress from recall → apply → analyze."
 3.	**Tone cue**: "Use a warm, encouraging tone and celebrate small insights."
 
 ---
