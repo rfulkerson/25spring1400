@@ -20,7 +20,7 @@ Task | Reason | Tips
 Generate code to debug |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
 [Interactive quiz / review](#review) |  Great for getting different versions of questions about topics you're learning. |  Frame the review in terms of CS1 and cross-check questions.
 Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame in terms of CS1 skills and have LLM evaluate your project code.
-<a href="#assign">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
+<a href="#assigns">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
 Stubbed-out larger project |  Mimics industry practice of inheriting partial codebases. |   Frame in terms of CS1 skills, have AI create project for you to complete.
 
 ---
