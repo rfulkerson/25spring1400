@@ -1,27 +1,35 @@
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/rfulkerson/25spring1400/blob/main/ai_for_cs1.md">Using AI Responsibly for CS1</a> &copy; 2025 by <span property="cc:attributionName">Robert Fulkerson</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
-**Last updated April 14, 2025. This is a work in progress.**
+**Last updated April 15, 2025. This is a work in progress.**
 
 # Using AI Responsibly for CS1
 
-Even with AI/LLMs available to us, as CS1 students, we should want to understand the code we're writing.
+What we learn in a CS1 course -- all of the basic syntax, concepts, and computational thinking -- is foundational material for understanding how to think about solving problems with programming, write your own code, debug your own code and code that others have written, and in the ever-evolving world of Artificial Intelligence (AI) and Large Language Models (LLMs), hereafter simply refered to as AI, work with them to create, analyze, and debug generated code
 
-What we're learning here in CS1 is foundational material for understanding how to write your own code, debug code others have written, and work with AI/LLMs to create, analyze, and debug code.
+We should want to have a fundamental understanding of the code that we're writing ourselves and that AI is writing for us, sometimes in the scope of ten lines of code or even hundreds or thousands of lines of code.
 
-Treat the AI/LLM as a suggestion engine. Your job is to verify, adapt, and learn from those suggestions.
+You should treat the AI as a suggestion engine. Your job as a computer scientist and Computer Science 1 (CS1) student is to verify, adapt, and learn from those suggestions.
 
 ---
 
-## Generalized Tasks for AI in CS1
+## Tasks that AI can be useful for in CS1
 
-There are a number of ways that AI can be used responsibly for learing materials in the course. Below are some possibilities. Click on a task name for more information or continue scrolling to see detailed discussions and sample prompts for each area.
+Since the release of ChatGPT in 2022 and its meteoric rise to widespread adoption and acceptance in many industries and sectors, especially education, many students have seen AI as a simple solution engine, pasting assignments into any number of AI engines and having those services generate passable solutions that they then submit as "homework".
 
-Task | Reason | Tips
+Unless the teacher explicitly states that a student should use AI, there is an obvious disconnect with what is intended by the instructor and how the student is engaging with the material. Simple copy/paste behavior of assignments into AI engines bypasses the carefully structured assignment developed by the teacher, likely intended to either scaffold the student to the next level of or assess their current understanding of the material.
+
+Even if AI is not explicitly allowed or approved for use on an assignment, there are a number of ways that AI can be used productively for learing materials in a CS1 course.
+
+Below are some of many numerous possibilities. 
+
+Click on a task area for more information or continue scrolling to see detailed discussions and sample prompts for each area.
+
+Task | Usefulness | Basic Tips
 :-- | :-- | :--
-[Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM.
+[Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM to deepend your understanding.
 Generate code to debug |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
 [Interactive quiz / review](#review) |  Great for getting different versions of questions about topics you're learning. |  Frame the review in terms of CS1 and cross-check questions.
-Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame in terms of CS1 skills and have LLM evaluate your project code.
+Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame idea generation in terms of CS1 skills and have the AI evaluate your project code.
 <a href="#assigns">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
 Stubbed-out larger project |  Mimics industry practice of inheriting partial codebases. |   Frame in terms of CS1 skills, have AI create project for you to complete.
 
@@ -34,13 +42,13 @@ Here are some example prompts you could use as guidance for your own questions:
 Goal |  Example prompt 
 :-- | :--
 Concept clarification |  Can you explain the concept of type in Python? Assume I only know CS1 materials.
-Debugging help | I'm getting a TypeError when I run this snippet. Can you help me understand what's wrong?<br><br>`grades = [88, 92, 79]` <br>`average = 0`<br>`for g in grades:`<br>`    average += g`<br>`    print("Average: " + average / len(grades))`
+Debugging help | I'm getting a TypeError when I run this code. Can you help me understand what's wrong?<br><br>`grades = [88, 92, 79]` <br>`average = 0`<br>`for g in grades:`<br>`    average += g`<br>`    print("Average: " + average / len(grades))`
 Design guidance | I need to store student scores. Which built-in Python type would be most appropriate and why?
 Step-by-step hint | I'm stuck on converting a string like `'1,149'` to an integer. Don't give me the final code, but can you nudge me in the right direction?
 
 Thoughts:
 
-* **Emphasize minimal, runnable examples.** Paste only what's necessary so that feedback is focused.
+* **Emphasize minimal, runnable examples.** Paste only what's necessary so that the feedback is focused.
 * **Ask for explanations first, code only if necessary.** "Explain why my loop is off-by-one before suggesting a fix."
 * **Compare AI advice to official docs.** Cross-check functions/code/results with official documentation/requirements, building healthy skepticism.
 * **Reflect aloud.** After the AI's answer, paraphrase out loud what your takeaway is. ([Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging))
@@ -49,13 +57,13 @@ Thoughts:
 
 ### <a name="review">Interactive Quiz / Review</a>
 
-Using an AI/LLM for quiz or concept review can be done simply or in a more detailed manner.
+Using an AI for quiz or concept review can be done simply or in a more detailed manner. The prompt you use can guide your experience with the review.
 
 Here's an example of a simple prompt that generates some questions for review:
 
 > Hi. I'm taking a CS1 course and we have a quiz coming up soon about functions and strings. Can you prompt me with about 15 questions appropriate for a CS1 course and check my correctness?
 
-And here's a more detailed prompt that specifies exact parameters of the content and the types of questions:
+And here's a more detailed prompt that specifies exact parameters of the content and the types of questions. The topics section would be modified for the specific material being studied.
 
 > I'm studying for a CS1 quiz that will cover functions, strings, lists, and dictionaries in Python. Could you create a 15-question practice quiz that mixes multiple-choice, short-answer, code-writing, and conceptual/explanation questions focused on key concepts from these topics?
 >
@@ -72,13 +80,11 @@ And here's a more detailed prompt that specifies exact parameters of the content
 > 
 > Please exclude questions involving error handling or try/except blocks, as those are not covered at this level.
 >
-> After each question, please allow me to answer and provide feedback on my response.
+> After each question, please allow me to answer and provide feedback on my response before moving on to the next question.
 > 
 > If presenting code, please format it with multiple lines for clarity.
 >
-> At the end, please provide a summary of my performance with suggestions on areas to review.
-> 
-> Thanks!
+> At the end, please provide a summary of my performance with suggestions on areas to review and areas of strength.
 
 ---
 
@@ -86,7 +92,7 @@ And here's a more detailed prompt that specifies exact parameters of the content
 
 Probably the most widely used aspect of AI today for a CS1 student is copying and pasting an assignment's specifications into an AI to have it simply write code to solve the problem for them.
 
-There's zero learning in that situation, and the student isn't properly prepared for future coursework that will require them to think deeply and critically about how to implement a solution to a problem or how to analyze content that is generated by an AI assistant.
+There's zero learning in that situation, and you're not preparing yourself for more advanced coursework int he future that will require you to think deeply and critically about how to implement a solution to a problem or how to analyze content that is generated by an AI assistant.
 
 *A different way to approach this situation is to use the AI as a suggestion engine and competent CS tutor.*
 
@@ -132,9 +138,9 @@ Here is a sample prompt with a well-defined [system message](https://promptmethe
 >
 > Although the letters `OMPUTERS` in `COMPUTERS` are upper case, those letters are not processed for the acronym for being a part of the word `COMPUTERS`. Similarly, even though `EST` in the word `tEST` are capitalized, they are not processed because the program should only pay attention to the first letter of the word.
 
-Here's are some reasons that a prompt like ths works so well:
+Here's are some reasons that a prompt like this works so well:
 
-Item/Directive | Purpose
+Item/Directive | Purpose/Result
 :-- | :--
 Initial system message |Gives the model a hard boundary: "No code."
 "CS1-level Python tutor" | Signals the target audience and expected depth.
