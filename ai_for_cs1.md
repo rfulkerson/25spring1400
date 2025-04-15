@@ -4,9 +4,9 @@
 
 # Using AI Responsibly for CS1
 
-What we learn in a CS1 course -- all of the basic syntax, concepts, and computational thinking -- is foundational material for understanding how to think about solving problems with programming, write your own code, debug your own code and code that others have written, and in the ever-evolving world of Artificial Intelligence (AI) and Large Language Models (LLMs), hereafter simply refered to as AI, work with them to create, analyze, and debug generated code
+What we learn in a CS1 course -- all of the basic syntax, concepts, and computational thinking -- is foundational material for understanding how to think about solving problems with programming, write your own code, debug your own code and code that others have written. In the ever-evolving world of Artificial Intelligence (AI) and Large Language Models (LLMs) -- hereafter simply refered to as AI -- work with them to create, analyze, and debug generated code
 
-We should want to have a fundamental understanding of the code that we're writing ourselves and that AI is writing for us, sometimes in the scope of ten lines of code or even hundreds or thousands of lines of code.
+As students taking an introductory computer science course, you should have a fundamental understanding of the code that we're writing ourselves and that AI is writing for us, sometimes in the scope of ten lines of code or even hundreds or thousands of lines of code.
 
 You should treat the AI as a suggestion engine. Your job as a computer scientist and Computer Science 1 (CS1) student is to verify, adapt, and learn from those suggestions.
 
