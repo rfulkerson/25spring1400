@@ -14,6 +14,8 @@ Treat the AI/LLM as a suggestion engine. Your job is to verify, adapt, and lear
 
 ## Generalized Tasks for AI in CS1
 
+There are a number of ways that AI can be used responsibly for learing materials in the course. Below are some possibilities. Click on a task name for more information or continue scrolling to see detailed discussions and sample prompts for each area.
+
 Task | Reason | Tips
 :-- | :-- | :--
 [Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM.
