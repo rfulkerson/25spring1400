@@ -150,9 +150,9 @@ Beginner-level reminder in User section | Redundancy that further reduces drift 
 
 Here are some tips you can keep in mind while working with this type of prompt:
 
-1.	**Iterate safely** – If the model starts drifting into code, you should be able to stop it with: 
-"Please remove any code from your response and stick to conceptual guidance."
-1. **Be explicit** – If you later paste partial code for debugging, prepend it with:
+1.	**Iterate safely** – If the model starts drifting into code, you should be able to redirect it with: 
+"Please remove any code from future responses and stick to conceptual guidance."
+1. **Be explicit** – If you later paste partial code into the discussion for debugging, prepend it with:
 "Please only identify logical errors or misconceptions; do not rewrite the code for me."
 3.	**Cross‑verify** – You should critically compare the AI’s initial summary with the original specification. Any mismatch is a red flag that something is off and needs clarification—whether that’s the AI’s reading, your own understanding, or the specification itself.
 4.	**Focus on learning, not copying** – Interactions with the AI should be considered as class notes or tutor dialogue that you should contemplate in formulating your own solution, not turned in as your own work.
