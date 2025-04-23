@@ -1,0 +1,16 @@
+This
+is
+a
+SAMPLE
+List
+of
+words
+This
+is
+another
+Way
+to
+Practice
+Working
+with
+files
