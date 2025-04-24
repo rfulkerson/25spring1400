@@ -8,3 +8,4 @@ browsers = { "Samsung" : 2.81,
 data = browsers.keys()
 
 print(sorted(data, reverse=True).pop(-2))
+print(data)

@@ -2,9 +2,10 @@
 
 stuff = dict(one=10, two=20, three=30, four=40)
 thing = {"one":10, "two":20, "three":30, "four":40}
-# 
+
 # for v in stuff.values():
 #     print(v)
+# store = stuff.values()
 # for k in stuff.keys():
 #     print(k)
 # for k,v in stuff.items():
@@ -17,6 +18,11 @@ temps = { "w1" : [56, 76, 81, 32, 1, 88, 88],
           "w3" : [ 10, 20, 30, 40, 50, 60, 70, 80],
           }
 
+temp_list = [
+        [56, 76, 81, 32, 1, 88, 88],
+        [ 1, 2, 3, 4, 5, 6, 7 ],
+        [ 10, 20, 30, 40, 50, 60, 70, 80],    
+    ]
 # print(temps)
 # 
 # temps["w4"] = [67, 43]
@@ -33,17 +39,17 @@ temps = { "w1" : [56, 76, 81, 32, 1, 88, 88],
           "w3" : [ 10, 20, 30, 40, 50, 60, 70, 80],
           }
 
-for w,t in temps.items():
-    print("="*20)
-    print(w)
-    print(t)
-    for a_temp in t:
-        print(a_temp, end=' and ')
-    print()
-    print(sum(t))
-    print(len(t))
-    print(sum(t)/len(t))
-    print()
+# for w,t in temps.items():
+#     print("="*20)
+#     print(w)
+#     print(t)
+#     for a_temp in t:
+#         print(a_temp, end=' and ')
+#     print()
+#     print(sum(t))
+#     print(len(t))
+#     print(sum(t)/len(t))
+#     print()
 # # 
 # # 
 # 
@@ -58,17 +64,17 @@ concerts = {
     'CHI' : {
             'address' : '455 N 10th St, Omaha, NE 68102',
             'capacity' : 18975,
-            'shows' : ['Kelsea Ballerini', 'Linkin Park']
+            'shows' : ['Jonas Brothers', 'Tate McRae']
         },
     'Slowdown' : {
             'address' : '729 N 14th St, Omaha, NE 68102',
             'capacity' : 750,
-            'shows' : ['King Buffalo', 'Michigan Rattlers', 'The Velveteers']
+            'shows' : ['Gimme Gimme Disco', 'Fooz Fighters', 'This Will Destroy You']
         },
     'Orpheum' : {
             'address' : '409 S 16th St, Omaha, NE 68102',
             'capacity' : 2600,
-            'shows' : ['The Nutcracker', 'Peter Pan', "Kimberly Akimbo"]
+            'shows' : ['Stardew Valley Symphony', 'Hamilton', "Penn & Teller", "bob"]
         }
     }
 
@@ -86,5 +92,5 @@ for venue in concerts:
    print("Capacity:", concerts[venue]['capacity'])
    print("Shows: ")
    for s in concerts[venue]['shows']:
-       print(f"{s:>20}")
-    
+       print(f"{s:>25}")
+#     

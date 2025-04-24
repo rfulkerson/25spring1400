@@ -13,8 +13,8 @@ dictionary = { "what" : "hi", "who": "Yo" }
 # for val in dictionary.values():
 #     print(val)
 
-for key,val in dictionary.items():
-    print(key,val)
+# for key,val in dictionary.items():
+#     print(key,val)
 # 
-for key in dictionary:
-    print(key,dictionary[key])
+# for key in dictionary:
+#     print(key,dictionary[key])
