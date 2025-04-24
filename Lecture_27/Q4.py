@@ -1,5 +1,0 @@
-file = open("numbers.txt", "r")
-data = file.read()
-numbers = data.split(',')
-file.close()
-print(numbers[4])
