@@ -104,14 +104,14 @@ Here is a prompt template you can use to generate an interactive debugging tutor
 
 For the "configuration block", you would choose one of the options for each category, like this:
 
-> DIFFICULTY = "medium"
-> CONCEPT_FOCUS = "loops"
-> BUG_TYPE = "runtime"
-> COMMONNESS = "common"
-> LOC_LIMIT = "15–20"
-> BUG_COUNT = "one bug"
-> ERROR_VISIBILITY = "visible traceback"
-> SCAFFOLDING = "sample I/O"
+> DIFFICULTY = "medium"<br/>
+> CONCEPT_FOCUS = "loops"<br/>
+> BUG_TYPE = "runtime"<br/>
+> COMMONNESS = "common"<br/>
+> LOC_LIMIT = "15–20"<br/>
+> BUG_COUNT = "one bug"<br/>
+> ERROR_VISIBILITY = "visible traceback"<br/>
+> SCAFFOLDING = "sample I/O"<br/>
 > COMMENT_QUALITY = "accurate comments"
 
 A note about `LOC_LIMIT`: LOC stands of Lines of Code, so you can specify about how big you'd like the code to be.
@@ -141,14 +141,14 @@ A complete example prompt might look like this:
 > • Keep each message under 200 words so the chat stays snappy.
 > • Follow the interaction instructions below exactly.
 >
-> DIFFICULTY = "medium"
-> CONCEPT_FOCUS = "loops"
-> BUG_TYPE = "runtime"
-> COMMONNESS = "common"
-> LOC_LIMIT = "15–20"
-> BUG_COUNT = "one bug"
-> ERROR_VISIBILITY = "visible traceback"
-> SCAFFOLDING = "sample I/O"
+> DIFFICULTY = "medium"<br/>
+> CONCEPT_FOCUS = "loops"<br/>
+> BUG_TYPE = "runtime"<br/>
+> COMMONNESS = "common"<br/>
+> LOC_LIMIT = "15–20"<br/>
+> BUG_COUNT = "one bug"<br/>
+> ERROR_VISIBILITY = "visible traceback"<br/>
+> SCAFFOLDING = "sample I/O"<br/>
 > COMMENT_QUALITY = "accurate comments"
 > 
 > Your tasks:
