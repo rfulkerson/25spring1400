@@ -163,7 +163,7 @@ A complete example prompt might look like this:
 > 6. End with a reflection question (“What will you look for first the next time you see a bug like this?”).
 > 
 > Forbidden:
-> • Don’t reveal the full solution until step 5.
+> • Don’t reveal the full solution until step 5.<br/>
 > • Don’t introduce concepts beyond CS1 unless I ask.
 
 
