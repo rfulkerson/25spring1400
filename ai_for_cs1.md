@@ -1,6 +1,6 @@
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/rfulkerson/25spring1400/blob/main/ai_for_cs1.md">Using AI Responsibly for CS1</a> &copy; 2025 by <span property="cc:attributionName">Robert Fulkerson</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/rfulkerson/25spring1400/blob/main/ai_for_cs1.md">Using AI Responsibly for CS1</a> &copy; 2025 by <span property="cc:attributionName">Robert Fulkerson</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" vel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
-**Last updated April 23, 2025. This is a work in progress.**
+**Last updated April 29, 2025. This is a work in progress.**
 
 # Using AI Responsibly for CS1
 
@@ -29,7 +29,7 @@ Through intentional prompt creation, AI can be used to augment without replacing
 Task | Usefulness | Basic Tips
 :-- | :-- | :--
 [Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM to deepend your understanding.
-Generate code to debug |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
+[Generate code to debug](#debugging) |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
 [Interactive quiz / review](#review) |  Great for getting different versions of questions about topics you're learning. |  Frame the review in terms of CS1 and cross-check questions.
 Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame idea generation in terms of CS1 skills and have the AI evaluate your project code.
 <a href="#assigns">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
@@ -57,7 +57,117 @@ Further thoughts on prompt creation for topic research:
 * **Compare AI advice to official docs.** Cross-check functions/code/results with official documentation/requirements, building healthy skepticism.
 * **Reflect aloud.** After the AI's answer, paraphrase out loud what your takeaway is. ([Rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging))
 
-<hr>
+---
+
+
+### <a name="debugging">Guided Debugging Practice</a>
+
+According to [O'Dell](https://queue.acm.org/detail.cfm?id=3068754) (2017), studies have shown that software engineers spend between 35-50% of their on-the-job time validating and debugging code, and those activities absorb 50-70% of a project's entire budget. [Saini](https://www.blackduck.com/blog/cost-to-fix-bugs-during-each-sdlc-phase.html) (2017) adds about the software development lifecycle (SDLC) that, "prevention is better than a cure, and this definitely holds true when it comes to bugs and security issues. During the development process, it is more cost-effective and efficient to fix bugs in earlier stages rather than later ones. The cost of fixing an issue increases exponentially as the software moves forward in the SDLC."
+
+For these and many other reasons, it's critical to develop good debugging skills early on in your computer science career. There are many times during development of initial programs in a CS1 course that students may get frustrated when their code generates an error. It's eas to know when a syntax error or runtime error occurs because the code doesn't run or crashes while running. But the error messages that are generated from either type of error can be cryptic and difficult to decipher. Logic errors, when the code runs to completion but generates incorrect results, are even tougher to troubleshoot.
+
+AI can help generate CS1-appropriate interactive debugging practice problems without simply plugging in code that's not working and asking it to be fixed.
+
+Here is a prompt template you can use to generate an interactive debugging tutoring session:
+
+> You are an encouraging CS1 Python tutor. Your job is to create a short buggy program and guide me through finding and fixing the bug(s) without giving the corrected code until I have attempted a solution or explicitly ask for it.
+> 
+> * Use language appropriate for an absolute beginner.
+> * Keep each message under 200 words so the chat stays snappy.
+> * Follow the interaction instructions below exactly.
+>
+> DIFFICULTY = "<easy | medium | tricky>"
+> CONCEPT_FOCUS = "<strings | loops | lists | functions | file-I/O | …>"
+> BUG_TYPE = "<syntax | runtime | logic>"
+> COMMONNESS = "<common | less-common | rare>"
+> LOC_LIMIT = "<≤10 | 15–20 | ~30>"
+> BUG_COUNT = "<one bug | two unrelated bugs | several cascading bugs>"
+> ERROR_VISIBILITY = "<visible traceback | silent wrong output>"
+> SCAFFOLDING = "<docstring only | sample I/O | failing unit test>"
+> COMMENT_QUALITY = "<accurate comments | misleading comment | no comments>"
+>
+> Your tasks:
+> 
+>	1.	Generate the buggy snippet that fits all the parameters above.
+>	2.	Show any expected output / failing test that belongs to the scaffolding level.
+>	3.	Invite me to inspect the code and describe what I think the bug is.
+>	4.	When I respond, ask probing questions or offer incremental hints (maximum one hint per reply) until I either:
+>	    •	supply a fix, or
+>	    •	say “show me the answer.”
+>	5.	Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
+>	6.	End with a reflection question (“What will you look for first the next time you see a bug like this?”).
+>
+> Forbidden
+> * Don’t reveal the full solution until step 5.
+> * Don’t introduce concepts beyond CS1 unless I ask.
+
+
+For the "configuration block", you would choose one of the options for each category, like this:
+
+> DIFFICULTY = "medium"
+> CONCEPT_FOCUS = "loops"
+> BUG_TYPE = "runtime"
+> COMMONNESS = "common"
+> LOC_LIMIT = "15–20"
+> BUG_COUNT = "one bug"
+> ERROR_VISIBILITY = "visible traceback"
+> SCAFFOLDING = "sample I/O"
+> COMMENT_QUALITY = "accurate comments"
+
+A note about `LOC_LIMIT`: LOC stands of Lines of Code, so you can specify about how big you'd like the code to be.
+
+A note about `SCAFFOLDING`: Scaffolding in this instance refers to the support that the AI provides to get you started. Here is a table of scaffolding, from most difficult (no assistance or scaffolding to start with) to most helpful (lots of assistance or scaffolding to start with):
+
+Value to plug into the prompt |What the model will add |When you might use it
+:-- | :-- |:--
+none|Just the buggy code block--”no explanation, no I/O examples.|Later in the term or when you're more confident about your skills.
+docstring only |A short docstring describing the function's intent.|Quick comprehension check without giving away behavior.
+inline comments|Comments (accurate) explaining what each section should do.|Good first diagnostic practice.
+misleading comment|One incorrect comment that conflicts with the code--™s real intent.|Forces you to question assumptions.
+sample I/O|One or two example input->output pairs|Students can run & compare results quickly.
+expected output block|A full multiline output the program should produce.|Helpful for longer scripts (file-I/O, text menus).
+doctest lines|Python >>> doctest examples that currently fail.|Integrates testing mindset early.
+failing unit test|A tiny pytest test suite that fails.|Introduces formal testing tools; great prep for later|courses.
+logging scaffold|Pre-inserted `print()` / logging calls that reveal state.|Teaches trace-based debugging techniques.
+stack-trace only|The traceback captured from a run (but no sample input).|Focuses on reading error messages.
+partial skeleton|Function signatures and TODO comments; body is missing or wrong.|Mirrors how real bug tickets often arrive.
+step-wise hint list|A numbered hint set you can request one-by-one.|Encourages metacognition and help-seeking skills.
+
+A complete example prompt might look like this:
+
+> You are an encouraging CS1 Python tutor. Your job is to create a short buggy program and guide me through finding and fixing the bug(s) without giving the corrected code until I have attempted a solution or explicitly ask for it.
+> 
+> • Use language appropriate for an absolute beginner.
+> • Keep each message under 200 words so the chat stays snappy.
+> • Follow the interaction instructions below exactly.
+>
+> DIFFICULTY = "medium"
+> CONCEPT_FOCUS = "loops"
+> BUG_TYPE = "runtime"
+> COMMONNESS = "common"
+> LOC_LIMIT = "15–20"
+> BUG_COUNT = "one bug"
+> ERROR_VISIBILITY = "visible traceback"
+> SCAFFOLDING = "sample I/O"
+> COMMENT_QUALITY = "accurate comments"
+> 
+> Your tasks:
+> 
+> 1. Generate the buggy snippet that fits all the parameters above.
+> 2. Show any expected output / failing test that belongs to the scaffolding level.
+> 3.  Invite me to inspect the code and describe what I think the bug is.
+> 4. When I respond, ask probing questions or offer incremental hints (maximum one hint per reply) until I either:
+>     • supply a fix, or
+>     • say “show me the answer.”
+> 5. Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
+> 6. End with a reflection question (“What will you look for first the next time you see a bug like this?”).
+> 
+> Forbidden:
+> • Don’t reveal the full solution until step 5.
+> • Don’t introduce concepts beyond CS1 unless I ask.
+
+
+---
 
 ### <a name="review">Interactive Quiz / Review</a>
 
