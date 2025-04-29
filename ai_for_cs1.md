@@ -76,14 +76,14 @@ Here is a prompt template you can use to generate an interactive debugging tutor
 > * Keep each message under 200 words so the chat stays snappy.
 > * Follow the interaction instructions below exactly.
 >
-> DIFFICULTY = "<easy | medium | tricky>"
-> CONCEPT_FOCUS = "<strings | loops | lists | functions | file-I/O | …>"
-> BUG_TYPE = "<syntax | runtime | logic>"
-> COMMONNESS = "<common | less-common | rare>"
-> LOC_LIMIT = "<≤10 | 15–20 | ~30>"
-> BUG_COUNT = "<one bug | two unrelated bugs | several cascading bugs>"
-> ERROR_VISIBILITY = "<visible traceback | silent wrong output>"
-> SCAFFOLDING = "<docstring only | sample I/O | failing unit test>"
+> DIFFICULTY = "<easy | medium | tricky>"<br/>
+> CONCEPT_FOCUS = "<strings | loops | lists | functions | file-I/O | …>"<br/>
+> BUG_TYPE = "<syntax | runtime | logic>"<br/>
+> COMMONNESS = "<common | less-common | rare>"<br/>
+> LOC_LIMIT = "<≤10 | 15–20 | ~30>"<br/>
+> BUG_COUNT = "<one bug | two unrelated bugs | several cascading bugs>"<br/>
+> ERROR_VISIBILITY = "<visible traceback | silent wrong output>"<br/>
+> SCAFFOLDING = "<docstring only | sample I/O | failing unit test>"<br/>
 > COMMENT_QUALITY = "<accurate comments | misleading comment | no comments>"
 >
 > Your tasks:
