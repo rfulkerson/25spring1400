@@ -46,7 +46,7 @@ Here are some typical scenarios and example prompts you could use as guidance fo
 Goal |  Example prompt 
 :-- | :--
 Concept clarification |  Can you explain the concept of type in Python? Assume I only know CS1 materials.
-Debugging help | I'm getting a TypeError when I run this code. Can you help me understand what's wrong?<br><br><pre>`grades = [88, 92, 79]` <br>`average = 0`<br>`for g in grades:`<br>`    average += g`<br>`    print("Average: " + average / len(grades))`</pre>
+Debugging help | I'm getting a TypeError when I run this code. Can you help me understand what's wrong?<pre>`grades = [88, 92, 79]` <br>`average = 0`<br>`for g in grades:`<br>`    average += g`<br>`    print("Average: " + average / len(grades))`</pre>
 Design guidance | I need to store student scores. Which built-in Python type would be most appropriate and why?
 Step-by-step hint | I'm stuck on converting a string like `'1,149'` to an integer. Don't give me the final code, but can you nudge me in the right direction?
 
@@ -181,10 +181,9 @@ Here is a prompt template you can use to generate an interactive debugging tutor
 >	5.	Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
 >	6.	End with a reflection question (“What will you look for first the next time you see a bug like this?”).
 >
-> Forbidden
+> Forbidden:
 > * Don’t reveal the full solution until step 5.
 > * Don’t introduce concepts beyond CS1 unless I ask.
-
 
 For the "configuration block", you would choose one of the options for each category, as seen below. You can use the suggestions above or try modifying and adapting them to your liking.
 
@@ -228,9 +227,9 @@ A complete example prompt might look like this:
 
 > You are an encouraging CS1 Python tutor. Your job is to create a short buggy program and guide me through finding and fixing the bug(s) without giving the corrected code until I have attempted a solution or explicitly ask for it.
 > 
-> • Use language appropriate for an absolute beginner.
-> • Keep each message under 200 words so the chat stays snappy.
-> • Follow the interaction instructions below exactly.
+> * Use language appropriate for an absolute beginner.
+> * Keep each message under 200 words so the chat stays snappy.
+> * Follow the interaction instructions below exactly.
 >
 > DIFFICULTY = "medium"<br/>
 > CONCEPT_FOCUS = "loops"<br/>
@@ -248,14 +247,14 @@ A complete example prompt might look like this:
 > 2. Show any expected output / failing test that belongs to the scaffolding level.
 > 3.  Invite me to inspect the code and describe what I think the bug is.
 > 4. When I respond, ask probing questions or offer incremental hints (maximum one hint per reply) until I either:
->     • supply a fix, or
->     • say “show me the answer.”
+>     * supply a fix, or
+>     * say “show me the answer.”
 > 5. Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
 > 6. End with a reflection question (“What will you look for first the next time you see a bug like this?”).
 > 
 > Forbidden:
-> • Don’t reveal the full solution until step 5.<br/>
-> • Don’t introduce concepts beyond CS1 unless I ask.
+> * Don’t reveal the full solution until step 5.
+> * Don’t introduce concepts beyond CS1 unless I ask.
 
 
 ---
