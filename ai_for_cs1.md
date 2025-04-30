@@ -30,8 +30,8 @@ Task | Usefulness | Basic Tips
 :-- | :-- | :--
 [Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM to deepend your understanding.
 <a href="#assigns">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
-[Generate debugging practice problems](#debugging) |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
 [Interactive quiz / review](#review) |  Great for getting different versions of questions about topics you're learning. |  Frame the review in terms of CS1 and cross-check questions.
+[Generate debugging practice problems](#debugging) |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
 Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame idea generation in terms of CS1 skills and have the AI evaluate your project code.
 Stubbed-out larger project |  Mimics industry practice of inheriting partial codebases. |   Frame in terms of CS1 skills, have AI create project for you to complete.
 
@@ -140,6 +140,39 @@ Here are some extras you can add in to modify the AI's behavior even further (ad
 1.	**Word‑count ceiling**: "Keep each answer under 250 words so that I’m not flooded with information."
 2.	**[Bloom’s Taxonomy](https://www.youtube.com/watch?v=ve-Evb5bGoc) scaffolding**: "Frame your guiding questions to progress from recall → apply → analyze."
 3.	**Tone cue**: "Use a warm, encouraging tone and celebrate small insights."
+
+---
+
+### <a name="review">Interactive Quiz / Review</a>
+
+Using an AI for quiz or concept review can be done simply or in a more detailed manner. The prompt you use can guide your experience with the review.
+
+Here's an example of a simple prompt that generates some questions for review:
+
+> Hi. I'm taking a CS1 course and we have a quiz coming up soon about functions and strings. Can you prompt me with about 15 questions appropriate for a CS1 course and check my correctness?
+
+And here's a more detailed prompt that specifies exact parameters of the content and the types of questions. The topics section would be modified for the specific material being studied.
+
+> I'm studying for a CS1 quiz that will cover functions, strings, lists, and dictionaries in Python. Could you create a 15-question practice quiz that mixes multiple-choice, short-answer, code-writing, and conceptual/explanation questions focused on key concepts from these topics?
+>
+> Topics should include but not be limited to:
+> * Defining and calling functions
+> * Parameters, arguments, and return values
+> * Default parameters and keyword arguments
+> * Returning multiple values from a function
+> * String manipulation (e.g., indexing, slicing, concatenation, etc.)
+> * String methods (e.g., upper(), lower(), strip(), etc.)
+> * Lists: indexing, appending, slicing, and basic iteration
+> * Dictionaries: creating key-value pairs, accessing/modifying values, basic iteration
+> * Conceptual understanding of how functions, strings, lists, and dictionaries behave in Python (e.g., parameter passing, immutability vs. mutability, reference vs. copy, what it means to return a value, etc.)
+> 
+> Please exclude questions involving error handling or try/except blocks, as those are not covered at this level.
+>
+> After each question, please allow me to answer and provide feedback on my response before moving on to the next question.
+> 
+> If presenting code, please format it with multiple lines for clarity.
+>
+> At the end, please provide a summary of my performance with suggestions on areas to review and areas of strength.
 
 ---
 
@@ -255,39 +288,5 @@ A complete example prompt might look like this:
 > Forbidden:
 > * Don’t reveal the full solution until step 5.
 > * Don’t introduce concepts beyond CS1 unless I ask.
-
-
----
-
-### <a name="review">Interactive Quiz / Review</a>
-
-Using an AI for quiz or concept review can be done simply or in a more detailed manner. The prompt you use can guide your experience with the review.
-
-Here's an example of a simple prompt that generates some questions for review:
-
-> Hi. I'm taking a CS1 course and we have a quiz coming up soon about functions and strings. Can you prompt me with about 15 questions appropriate for a CS1 course and check my correctness?
-
-And here's a more detailed prompt that specifies exact parameters of the content and the types of questions. The topics section would be modified for the specific material being studied.
-
-> I'm studying for a CS1 quiz that will cover functions, strings, lists, and dictionaries in Python. Could you create a 15-question practice quiz that mixes multiple-choice, short-answer, code-writing, and conceptual/explanation questions focused on key concepts from these topics?
->
-> Topics should include but not be limited to:
-> * Defining and calling functions
-> * Parameters, arguments, and return values
-> * Default parameters and keyword arguments
-> * Returning multiple values from a function
-> * String manipulation (e.g., indexing, slicing, concatenation, etc.)
-> * String methods (e.g., upper(), lower(), strip(), etc.)
-> * Lists: indexing, appending, slicing, and basic iteration
-> * Dictionaries: creating key-value pairs, accessing/modifying values, basic iteration
-> * Conceptual understanding of how functions, strings, lists, and dictionaries behave in Python (e.g., parameter passing, immutability vs. mutability, reference vs. copy, what it means to return a value, etc.)
-> 
-> Please exclude questions involving error handling or try/except blocks, as those are not covered at this level.
->
-> After each question, please allow me to answer and provide feedback on my response before moving on to the next question.
-> 
-> If presenting code, please format it with multiple lines for clarity.
->
-> At the end, please provide a summary of my performance with suggestions on areas to review and areas of strength.
 
 ---
