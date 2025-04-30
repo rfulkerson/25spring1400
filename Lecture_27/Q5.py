@@ -1,0 +1,5 @@
+file = open("log.txt", "r+")
+file.write("New Log Entry")
+content = file.read()
+file.close()
+print(content)
