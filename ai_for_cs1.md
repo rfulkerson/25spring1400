@@ -1,6 +1,6 @@
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/rfulkerson/25spring1400/blob/main/ai_for_cs1.md">Using AI Responsibly for CS1</a> &copy; 2025 by <span property="cc:attributionName">Robert Fulkerson</span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" vel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
-**Last updated April 30, 2025. This is a work in progress.**
+**Last updated May 5th, 2025. This is a work in progress.**
 
 # Using AI Responsibly for CS1
 
@@ -20,19 +20,19 @@ While you will undoubtedly use AI as a collaboration tool at some point later in
 
 ## Tasks that AI can be useful for in CS1
 
-Unless the teacher explicitly states that a student should use AI, there is an obvious disconnect with what is intended by the instructor and how the student is engaging with the material. Copying and pasting assignments into an AI bypasses the carefully structured assignment developed by the teacher, likely intended to either scaffold the student to the next level of or assess their current understanding of the material.
+Unless the teacher explicitly states that a student should use AI, there is an obvious disconnect with what is intended by the instructor and how the student is engaging with the material if AI is used to complete the assignment without much, if any, work on the student's part. Copying and pasting assignments into an AI bypasses the carefully structured assignment developed by the teacher, likely intended to either scaffold the student to the next level or assess their current understanding of the material.
 
-Even if AI is not explicitly allowed or approved for use on an assignment or in a course, there are a number of ways that AI can be used productively for learning materials in a CS1 course without using it as a solution engine but rather as a suggestion engine.
+If AI is not explicitly allowed or approved for use on an assignment or in a course, there are a number of ways that AI can be used productively and responsibly for learning materials in a CS1 course without using it as a solution engine but rather as a suggestion engine.
 
-Through intentional prompt creation, AI can be used to augment without replacing your learning of the foundational computational and programmatic material in a typical CS1 course. Click on a task area for more information and to see example AI prompts that you can modify for your own use.
+Through careful, intentional prompt creation, AI can be used to augment without replacing your learning of the foundational computational and programmatic material in a typical CS1 course. Click on a task area below for more information and to see example AI prompts that you can modify for your own use.
 
 Task | Usefulness | Basic Tips
 :-- | :-- | :--
-[Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM to deepend your understanding.
+[Research a topic further](#research)|  Practice prompting, interacting with results, and evaluating sources. |  Cross-check at least one claim outside of the AI/LLM to deepen your understanding.
 <a href="#assigns">Assignment guidance without code</a> |  AI can outline tasks and make suggestions about how to approach a problem. |   Analyze your own thinking against what the AI suggests.
 [Interactive quiz / review](#review) |  Great for getting different versions of questions about topics you're learning. |  Frame the review in terms of CS1 and cross-check questions.
 [Generate debugging practice problems](#debugging) |  Debugging is a core CS1 skill. |  Ask the LLM to not label or identify bugs.
-Brainstorm personal projects |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame idea generation in terms of CS1 skills and have the AI evaluate your project code.
+[Brainstorm personal projects](#projects) |  Personal interest drives active and engaged learning and leads to rewarding results. |   Frame idea generation in terms of CS1 skills and have the AI evaluate your project code.
 Stubbed-out larger project |  Mimics industry practice of inheriting partial codebases. |   Frame in terms of CS1 skills, have AI create project for you to complete.
 
 ---
@@ -70,22 +70,22 @@ There's zero learning in that situation, and you're not preparing yourself for m
 
 Here is a sample prompt with a well-defined [system message](https://promptmetheus.com/resources/llm-knowledge-base/system-message) and [user section](https://www.nebuly.com/blog/llm-system-prompt-vs-user-prompt) that you could use to set up a useful and interacative session. You would replace the actual assignment specification at the end of this example with a relevant assignment or problem to work through.
 
->You are a friendly CS1‑level Python tutor. Your job is to guide me through the problem‑solving process *without providing any code, pseudocode, or step‑by‑step algorithmic solution*.
+>You are a friendly CS1-level Python tutor. Your job is to guide me through the problem-solving process *without providing any code, pseudocode, or step-by-step algorithmic solution*.
 >
-> * Use plain language appropriate for a first‑semester programming student.
+> * Use plain language appropriate for a first-semester programming student.
 > * Limit jargon; if a technical term is necessary, give a short definition in parentheses.
 > * Favor concrete examples that involve basic Python concepts (variables, loops, lists, functions) and avoid advanced topics (classes, recursion, decorators, exceptions) unless I explicitly ask.
 > * Encourage me to think aloud and verify my own understanding.
-> * End each reply with one “check‑your‑understanding” question I can answer before we continue.
+> * End each reply with one "check-your-understanding" question I can answer before we continue.
 >
 > What I need from you:
 > 
-> 1. Plain‑English summary – Restate the task so I can confirm my understanding.
+> 1. Plain-English summary – Restate the task so I can confirm my understanding.
 > 2.	Key elements – List inputs, outputs, and constraints.
-> 3.	Conceptual roadmap – Suggest high‑level strategies or data structures I might explore (no code).
+> 3.	Conceptual roadmap – Suggest high-level strategies or data structures I might explore (no code).
 > 4.	Guiding questions – Ask me what I should consider (edge cases, tests, pitfalls).
 > 5.	Forbidden content – No code, pseudocode, or exact algorithmic steps.
-> 6.	Check‑back option – Tell me how I can follow up once I’ve tried something.
+> 6.	Check-back option – Tell me how I can follow up once I've tried something.
 > 7.	(Reminder) – Please keep explanations at a CS1 beginner level.
 >
 > Assignment Description:
@@ -132,13 +132,13 @@ Here are some tips you can keep in mind while working with this type of prompt:
 "Please remove any code from future responses and stick to conceptual guidance."
 1. **Be explicit** – If you later paste partial code into the discussion for debugging, prepend it with:
 "Please only identify logical errors or misconceptions; do not rewrite the code for me."
-3.	**Cross‑verify** – You should critically compare the AI’s initial summary with the original specification. Any mismatch is a red flag that something is off and needs clarification—whether that’s the AI’s reading, your own understanding, or the specification itself.
+3.	**Cross-verify** – You should critically compare the AI's initial summary with the original specification. Any mismatch is a red flag that something is off and needs clarification—whether that's the AI's reading, your own understanding, or the specification itself.
 4.	**Focus on learning, not copying** – Interactions with the AI should be considered as class notes or tutor dialogue that you should contemplate in formulating your own solution, not turned in as your own work.
 
 Here are some extras you can add in to modify the AI's behavior even further (add these to the "What I need from you" section):
 
-1.	**Word‑count ceiling**: "Keep each answer under 250 words so that I’m not flooded with information."
-2.	**[Bloom’s Taxonomy](https://www.youtube.com/watch?v=ve-Evb5bGoc) scaffolding**: "Frame your guiding questions to progress from recall → apply → analyze."
+1.	**Word-count ceiling**: "Keep each answer under 250 words so that I'm not flooded with information."
+2.	**[Bloom's Taxonomy](https://www.youtube.com/watch?v=ve-Evb5bGoc) scaffolding**: "Frame your guiding questions to progress from recall → apply → analyze."
 3.	**Tone cue**: "Use a warm, encouraging tone and celebrate small insights."
 
 ---
@@ -210,13 +210,13 @@ Here is a prompt template you can use to generate an interactive debugging tutor
 >	3.	Invite me to inspect the code and describe what I think the bug is.
 >	4.	When I respond, ask probing questions or offer incremental hints (maximum one hint per reply) until I either:
 >	    *	supply a fix, or
->	    *	say “show me the answer.”
->	5.	Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
->	6.	End with a reflection question (“What will you look for first the next time you see a bug like this?”).
+>	    *	say "show me the answer."
+>	5.	Once I've fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
+>	6.	End with a reflection question ("What will you look for first the next time you see a bug like this?").
 >
 > Forbidden:
-> * Don’t reveal the full solution until step 5.
-> * Don’t introduce concepts beyond CS1 unless I ask.
+> * Don't reveal the full solution until step 5.
+> * Don't introduce concepts beyond CS1 unless I ask.
 
 For the "configuration block", you would choose one of the options for each category, as seen below. You can use the suggestions above or try modifying and adapting them to your liking.
 
@@ -244,7 +244,7 @@ Here are some notes about some of the configuration options:
 
 Value to plug into the prompt |What the model will add |When you might use it
 :-- | :-- |:--
-none|Just the buggy code block--”no explanation, no I/O examples.|Later in the term or when you're more confident about your skills.
+none|Just the buggy code block--"no explanation, no I/O examples.|Later in the term or when you're more confident about your skills.
 docstring only |A short docstring describing the function's intent.|Quick comprehension check without giving away behavior.
 inline comments|Comments (accurate) explaining what each section should do.|Good first diagnostic practice.
 misleading comment|Incorrect comment that conflicts with the code's real intent.|Forces you to question assumptions.
@@ -281,12 +281,63 @@ A complete example prompt might look like this:
 > 3.  Invite me to inspect the code and describe what I think the bug is.
 > 4. When I respond, ask probing questions or offer incremental hints (maximum one hint per reply) until I either:
 >     * supply a fix, or
->     * say “show me the answer.”
-> 5. Once I’ve fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
-> 6. End with a reflection question (“What will you look for first the next time you see a bug like this?”).
+>     * say "show me the answer."
+> 5. Once I've fixed it (or request the answer), provide the corrected code and a brief explanation of the fix.
+> 6. End with a reflection question ("What will you look for first the next time you see a bug like this?").
 > 
 > Forbidden:
-> * Don’t reveal the full solution until step 5.
-> * Don’t introduce concepts beyond CS1 unless I ask.
+> * Don't reveal the full solution until step 5.
+> * Don't introduce concepts beyond CS1 unless I ask.
+
+---
+
+### <a name="projects">Generating Personal Project Ideas</a>
+
+Depending on your CS1 course, you may create larger projects that go beyond simple syntax and integrate multiple concepts into a single program. This could be done as part of a lecture assignment or possibly in a lab or recitation context.
+
+Outside of the classroom, when you work on a personally relevant project, you find yourself investing more effort because you find more meaning in the end results and the successes and failures along the way. Development, maintenance, and extension of the project's code is usually more engaging and rewarding than prescribed projects in a classroom setting.
+
+Here are some ideas for various interests as examples of projects you could work on independently:
+
+1. **Sports - Season Stats Dashboard.** Read a small CSV of your favorite team's game results, loop through the rows to compute win/loss record, average points per game, and longest winning streak.  (Optional) Use `matplotlib` to plot points-per-game over time.
+2. **Music - Auto-Playlist Generator.** Ask the user for mood + desired length, then pick random tracks from a text file of songs until the total runtime matches.  Reinforces accumulators, while-loops, and string parsing.
+3. **Music - Vinyl Collection Analyzer**. Load a CSV of albums, iterate to find the oldest press, most-represented artist, and average track count.  Stretch goal: plot decade distribution with `matplotlib`.
+4. **Gaming — Pygame Click-the-Target (Whack-a-Mole).** Use `Pygame` to spawn a circle at random spots every second; the player gains a point by clicking it before it disappears.  Teaches event loops, collision detection, and basic scoring—plus plenty of room for power-ups or difficulty scaling.
+5. **Visual Arts — Turtle Mondrian Maker.** Use `Turtle` or `Pygame` to draw random rectangles in primary colors until the canvas fills, mimicking Piet Mondrian's style. Loops, random numbers, and simple functions keep the project around  150 lines of code.
+6. **Astronomy — Phases of the Moon Simulator.**  Print or use `Turtle` or `Pygame` to draw the current moon phase based on day-of-cycle input, then advance the phase each keypress. Great for modular arithmetic and simple animation.
+7. **Cinema — Movie Night Randomizer.** Load a CSV of films with genre and runtime; ask for desired genre + maximum length and pick a random match. Shows filtering lists of dictionaries and using `random.choice`.
+8. **Literature - Choose-Your-Own Adventure Story.** Create a text-based interactive fiction game where users make choices that shape the story.
+
+Below is a sample prompt you could use to have AI help you generate some personal project ideas. You would replace `<STUDENT_INTEREST>` with a field or discipline you're interested in. Once you have a suggested project, if you're not sure where to start you could use techniques suggested in the [assignment guidance](#assigns) section found earlier in this document to get some guidance about where to start.
+
+> You are a CS1 project mentor. Generate **3 personal-project ideas** that satisfy these constraints:
+> 
+>* Concepts allowed: variables, conditionals, loops, lists, functions, files.
+> * Scope: ≤ 250 lines, doable in ~10 hours.
+> * Domain personalization: <STUDENT_INTEREST>.
+> * For each idea include:
+>   1. One-sentence hook
+>   2. Brief, more in-depth summary
+>   2. 3 incremental milestones
+>   3. 2-3 edge-case test suggestions
+>   4. Success criteria (what output proves it works)
+>   5. One reflection question
+> 
+> Avoid external libraries unless already mentioned or absolutely necessary, web scraping, or file formats beyond plain text or CSV.
+
+Here are some considerations that you could use to modify the prompt:
+
+Consideration |Why it matters (CS-pedagogy + logistics)|How to include it in the prompt
+:--|:--|:--
+Concept alignment|Keep ideas inside the zone of proximal development—only use constructs covered so far (e.g., variables → loops → lists → functions).|"Suggest projects that rely only on loops, conditionals, and lists—no classes or external libraries."
+Scope & feasibility|A project that balloons to 1,000 LOC defeats motivation. A typical CS1 [timebox](https://en.wikipedia.org/wiki/Timeboxing) for larger projects is about 10-15 hours total.|"Each idea should be completable in < 300 lines or ≤ two weekends of work."
+Incremental milestones|Breaking a project into checkpoints improves completion rates and supports formative feedback.|"For each project, list 3-4 numbered milestones students can test after finishing each."
+Student agency / interests| [Project-based learning](https://en.wikipedia.org/wiki/Project-based_learning) studies find relevance boosts engagement and retention | "Tailor project themes to a specific student interest."
+Authentic data / context|Real-world flavor (CSV files, text logs, simple APIs) cultivates transfer of learning |"Prefer ideas that read small real datasets (e.g., a `weather.csv` file)."
+Assessment hooks|Clear success criteria help you know when you're done.|"Include at least two observable outcomes (expected console output or sample tests)."
+Testing & debugging practice|Embedding test-driven habits early reinforces debugging.|"For each idea, suggest 3 edge cases I should test."
+Accessibility & tooling|Assume only Python standard library and a basic IDE (Thonny).|"No third-party packages; run in vanilla Python 3.11 on Windows/Mac/Linux."
+Creativity vs. prescription|Balance open-ended exploration with enough structure that novices aren't paralyzed.|"Offer one guided, one semi-guided, and one open-ended prompt for variety."
+Reflection component|Metacognition cements learning.|"End each project brief with one reflection question, e.g., 'What was your biggest debugging hurdle?'"
 
 ---
